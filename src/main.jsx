@@ -390,7 +390,16 @@ function App() {
   if (screen === 'faq') return <FaqPage onStart={() => setScreen('create')} onHome={() => setScreen('welcome')} onHowItWorks={() => setScreen('how-it-works')} onStories={() => setScreen('stories')} onResources={() => setScreen('resources')} />;
 
   if (screen === 'create') return <main className="account-page">
-    <header className="figma-header account-header"><FigmaLogo /><nav><a href="#how-it-works">How it works</a><a href="#stories">Stories</a><a href="#resources">Resources</a><a href="#faq">FAQ</a></nav><div className="figma-header-actions"><button className="figma-login">Log in</button><button className="figma-small-cta" onClick={() => setScreen('create')}>Get started</button></div></header>
+    <header className="figma-header account-header">
+      <FigmaLogo onClick={() => setScreen('welcome')} />
+      <nav>
+        <a href="#how-it-works" onClick={(event) => { event.preventDefault(); setScreen('how-it-works'); }}>How it works</a>
+        <a href="#stories" onClick={(event) => { event.preventDefault(); setScreen('stories'); }}>Stories</a>
+        <a href="#resources" onClick={(event) => { event.preventDefault(); setScreen('resources'); }}>Resources</a>
+        <a href="#faq" onClick={(event) => { event.preventDefault(); setScreen('faq'); }}>FAQ</a>
+      </nav>
+      <div className="figma-header-actions"><button className="figma-login" onClick={() => setScreen('create')}>Log in</button><button className="figma-small-cta" onClick={() => setScreen('create')}>Get started</button></div>
+    </header>
     <div className="account-layout">
       <section className="account-intro"><div className="account-eyebrow">Get started</div><h1>Your next chapter<br />starts here</h1><p>Meet with a parent who understands the doubts and possibility of starting again.</p><AccountBenefits /></section>
       <section className="account-form-panel"><h2>Create your account</h2><form onSubmit={createAccount}><label>First name<input name="name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Your first name" /></label><label>Email address<input name="email" type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="you@example.com" /></label><label>Password<input name="password" type="password" placeholder="Choose a password" /></label>{error && <p className="error">{error}</p>}<button className="account-submit" type="submit">Create account <img src={arrowRightAsset} alt="" /></button></form><p className="account-login">Already have an account? <button type="button">Log in</button></p></section>
