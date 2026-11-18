@@ -139,10 +139,10 @@ h1 em, h2 em { font-family: 'Playfair Display', serif; font-weight: 500; letter-
 .figma-header a, .figma-login { color: #1e2124; font-size: 13px; text-decoration: none; border: 0; background: transparent; padding: 8px 0; }
 .figma-small-cta, .figma-primary { background: #00744d; color: #fff; border: 0; border-radius: 22px; font-weight: 600; cursor: pointer; }
 .figma-small-cta { padding: 10px 16px; font-size: 12px; }
-.figma-hero { text-align: center; padding: 67px 24px 0; }
+.figma-hero { text-align: center; padding: 96px 24px 0; }
 .figma-hero h1 { color: #00744d; font-size: clamp(42px, 5.2vw, 72px); font-weight: 600; line-height: 1.02; letter-spacing: -2px; margin: 0; }
-.figma-hero h1 span { display: block; color: #464c53; font-family: 'Playfair Display', serif; font-size: .64em; font-weight: 500; letter-spacing: -1px; margin-top: 10px; }
-.figma-hero > p { max-width: 650px; margin: 21px auto 17px; color: #464c53; font-size: 13px; line-height: 1.35; }
+.figma-hero h1 span { display: block; color: #464c53; font-family: 'Playfair Display', serif; font-size: .64em; font-weight: 500; letter-spacing: -1px; margin-top: 16px; }
+.figma-hero > p { max-width: 650px; margin: 40px auto 40px; color: #464c53; font-size: 13px; line-height: 1.35; }
 .figma-hero-actions, .figma-ready > div { display: flex; justify-content: center; align-items: center; gap: 10px; }
 .figma-primary, .figma-outline, .figma-white-cta, .figma-light-cta { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 11px 20px; border-radius: 22px; font-size: 12px; cursor: pointer; }
 .figma-outline { color: #00744d; border: 1px solid #00744d; background: transparent; }
@@ -185,7 +185,7 @@ h1 em, h2 em { font-family: 'Playfair Display', serif; font-weight: 500; letter-
   .figma-header { padding: 0 22px; }
   .figma-header nav { display: none; }
   .figma-header-actions { gap: 14px; }
-  .figma-hero { padding-top: 45px; }
+  .figma-hero { padding-top: 56px; }
   .figma-cards, .figma-mentors { grid-template-columns: 1fr; margin: 0 22px; }
   .figma-cards article { min-height: 155px; }
   .figma-story { grid-template-columns: 1fr; gap: 35px; margin: 80px 22px 0; }
@@ -548,16 +548,14 @@ h1 em, h2 em { font-family: 'Playfair Display', serif; font-weight: 500; letter-
 
 .figma-hero {
   position: relative;
-  padding-top: clamp(72px, 7vw, 100px);
   padding-bottom: 0;
 }
 .figma-hero h1 {
   overflow: visible;
-  padding-top: 8px;
 }
 .figma-process {
   width: min(1200px, calc(100% - 48px));
-  margin: 54px auto 0;
+  margin: 120px auto 0;
 }
 .figma-process > h2 {
   color: #464c53;
@@ -566,7 +564,7 @@ h1 em, h2 em { font-family: 'Playfair Display', serif; font-weight: 500; letter-
   font-weight: 500;
   letter-spacing: -.8px;
   line-height: 1.15;
-  margin: 0 0 28px;
+  margin: 0 0 48px;
   text-align: center;
 }
 .figma-cards {
@@ -581,22 +579,17 @@ h1 em, h2 em { font-family: 'Playfair Display', serif; font-weight: 500; letter-
 .figma-cards h3 {
   color: #00744d;
   font-size: 19px;
-  margin: 28px 0 15px;
+  margin: 32px 0 16px;
   letter-spacing: -.3px;
 }
 @media (max-width: 800px) {
-  .figma-hero {
-    padding-top: 48px;
-  }
   .figma-process {
     width: min(calc(100% - 32px), 520px);
-    margin-top: 48px;
-  }
-  .figma-process > h2 {
-    margin-bottom: 24px;
+    margin-top: 56px;
   }
   .figma-cards {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
 
